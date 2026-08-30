@@ -46,7 +46,8 @@ func main() {
 
 	//COMMA-OK IDIOM
 	//if ok is true then the key is present
-	//Used to find whether a key is present in the map or not, rather than judging based on the 0 value of the value type
+	//Used to find whether a key is present in the map or not, rather than judging based on the 0 value of the value type\
+	//v and ok variables are not block scoped as they are not enclosed in the if block as the variables value and ok on line number 72
 	v, ok := e["JAVA"]
 	fmt.Println(v, ok) // v prints the value, ok stores the boolean value based on whether the key is present or not
 
@@ -67,6 +68,7 @@ func main() {
 
 	fmt.Println(len(slice), len(m))
 
+	// this value and ok variables are block scoped therefore we can use them again as we're doing on line 75
 	if value, ok := m[100]; !ok {
 		fmt.Println("100 doesn't exist in set",value)
 	}
