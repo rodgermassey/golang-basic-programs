@@ -49,7 +49,7 @@ func main() {
 
 	fmt.Println(peter, bob, julia.age, beth.height)
 
-	//ANONYOUS STRUCT
+	//ANCHOR - ANONYMOUS STRUCT
 	//We can skip the struct name and directly use the definition of the struct
 	//mainly used for translating external data to and from into a struct (marshalling) & for writing tests
 	//1. we declare the variable of a particular anonymous struct and then assign values to it
