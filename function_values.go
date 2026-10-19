@@ -10,6 +10,9 @@ import (
   2 functions who have the same number of parameters with same types
   and same number of return values with same type have the same signature
 */
+// NOTE - type calcFuncType func(int, int) (int, int) 
+// this syntax is used if multiple values are returned
+// multiple return values are also enclosed in the paranthesis
 
 type calcFuncType func(int, int) int
 

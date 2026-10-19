@@ -82,4 +82,17 @@ func main() {
 	//but the rules for the pointer parameters remain the same
 	counter.Increment()
 	fmt.Println(counter.String())
+
+
+	// ANCHOR - METHOD VALUES
+	// method values are when the value of a method is assigned to a variable 
+	// this value of method is picked from the struct instance
+	methodValue := matt.String // This is method value here matt is an instance of the struct from that instance we assign the value of String method to the variable
+	fmt.Println(methodValue()) // here we call the method value directly
+
+	// ANCHOR - METHOD EXPRESSIONS
+	// method expressions are when the value of a method is assigned to a variable
+	// this value comes from the method that is defined on the struct not on the struct instance
+	methodExpression := Person.String // here the method value is picked from the struct
+	fmt.Println(methodExpression(matt)) // as there is no instance attached to the method as it is picked from struct we pass the struct instance to this method as the first parameter
 }
