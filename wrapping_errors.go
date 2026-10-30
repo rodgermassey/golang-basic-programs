@@ -17,6 +17,9 @@ import (
 // 5. Don't usually call errors.Unwrap() we use erros.Is or errors.As to find a specific wrapped error
 // 6. we can implement Unwrap method on our custom error type as well, it just returns the error, and now we can use this custom type to wrap errors
 
+// NOTE - if we want to create a new error and add info from the old error rather than wrapping it 
+// we use %v verb to append the error string to our error, rather than wrapping the error
+
 type Status int
 
 const (
